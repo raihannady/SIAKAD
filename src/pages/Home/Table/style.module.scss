@@ -1,0 +1,29 @@
+@import '../../../styles/base.scss';
+
+.container {
+  //   @include container;4
+  width: 90%;
+  margin: 7rem auto;
+  border: 1px solid rgba(201, 201, 201, 0.612);
+  background-color: white;
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 1rem;
+  }
+  .table {
+    text-align: right;
+    .action {
+      //   @include directionX;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .deleteButton {
+        color: red;
+        margin-left: 1rem;
+      }
+    }
+  }
+}

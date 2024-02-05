@@ -8,10 +8,9 @@ import { selectLocale, selectTheme } from '@containers/App/selectors';
 import Navbar from '@components/Navbar';
 import SideNavbar from '@components/SideNavbar';
 
-const MainLayout = ({ children, locale, theme, intl: { formatMessage } }) => (
+const SubLayout = ({ children, locale, theme, intl: { formatMessage } }) => (
   <div>
-    {/* <Navbar title={formatMessage({ id: 'app_title_header' })} locale={locale} theme={theme} /> */}
-    <SideNavbar title={formatMessage({ id: 'app_title_header' })} locale={locale} theme={theme} />
+    <Navbar title={formatMessage({ id: 'app_title_header' })} locale={locale} theme={theme} />
     {children}
   </div>
 );
@@ -21,11 +20,11 @@ const mapStateToProps = createStructuredSelector({
   theme: selectTheme,
 });
 
-MainLayout.propTypes = {
+SubLayout.propTypes = {
   children: PropTypes.element.isRequired,
   locale: PropTypes.string,
   theme: PropTypes.string,
   intl: PropTypes.object,
 };
 
-export default injectIntl(connect(mapStateToProps)(MainLayout));
+export default injectIntl(connect(mapStateToProps)(SubLayout));

@@ -1,3 +1,3 @@
 export default {
-  API_HOST: 'https://api.phincon.cloud/api/',
+  API_HOST: 'http://localhost:8080/',
 };

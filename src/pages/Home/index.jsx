@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 
 import { ping } from '@containers/App/actions';
+import BasicTable from './Table';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <div>
       <FormattedMessage id="app_greeting" />
+      {/* <BasicTable></BasicTable> */}
     </div>
   );
 };
