@@ -12,7 +12,7 @@ const routes = [
     name: 'Home',
     protected: false,
     component: Home,
-    layout: MainLayout,
+    layout: SubLayout,
   },
   {
     path: '/register',

@@ -1,5 +1,12 @@
 @import '@styles/base';
 
+.forget {
+  @include directionX;
+  justify-content: end;
+  font-size: 13px;
+  cursor: pointer;
+}
+
 .footer {
   @include directionX;
   width: 100%;

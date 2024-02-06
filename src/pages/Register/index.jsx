@@ -12,10 +12,12 @@ import { Link } from 'react-router-dom';
 
 import classes from './style.module.scss';
 import { register } from './actions';
+import { useNavigate } from 'react-router-dom';
 
 const defaultTheme = createTheme();
 
 export default function Register() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [user, setUser] = useState({});
 
@@ -34,6 +36,7 @@ export default function Register() {
       password: user.password,
     };
     dispatch(register(dataUser));
+    navigate('/login');
   };
 
   return (

@@ -89,6 +89,9 @@ export default function Login() {
               onChange={(e) => handleChange(e.target.value, 'password')}
               variant="filled"
             />
+            <Box className={classes.forget}>
+              <Link to="/forgot-password">Forgot Password?</Link>
+            </Box>
             <Button
               type="submit"
               fullWidth
