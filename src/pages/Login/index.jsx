@@ -66,32 +66,44 @@ export default function Login() {
             <TextField
               margin="normal"
               required
+              size="small"
               fullWidth
               id="email"
               label="Email Address"
               name="email"
-              // autoComplete="email"
+              type="email"
               autoFocus
               onChange={(e) => handleChange(e.target.value, 'email')}
               variant="filled"
             />
             <TextField
               margin="normal"
+              size="small"
               required
               fullWidth
               name="password"
               label="Password"
               type="password"
               id="password"
-              // autoComplete="current-password"
+              autoFocus
               onChange={(e) => handleChange(e.target.value, 'password')}
               variant="filled"
             />
-            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} className={classes.button}>
+            <Box className={classes.forget}>
+              <Link to="/forgot-password">Forgot Password?</Link>
+            </Box>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              size="small"
+              sx={{ mt: 3, mb: 2, textTransform: 'none' }}
+              className={classes.button}
+            >
               Login
             </Button>
             <Box className={classes.footer}>
-              <Link href="/register" variant="body2" className={classes.link}>
+              <Link href="/register" className={classes.link}>
                 Don't have an account? Sign Up
               </Link>
             </Box>
