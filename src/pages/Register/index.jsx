@@ -8,6 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState } from 'react';
 // import { encryptPayload } from '@utils/encryptPayload';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import classes from './style.module.scss';
 import { register } from './actions';
@@ -62,6 +63,7 @@ export default function Register() {
               autoFocus
               onChange={(e) => handleChange(e.target.value, 'fullname')}
               variant="filled"
+              size="small"
             />
             <TextField
               margin="normal"
@@ -74,6 +76,7 @@ export default function Register() {
               autoFocus
               onChange={(e) => handleChange(e.target.value, 'email')}
               variant="filled"
+              size="small"
             />
             <TextField
               margin="normal"
@@ -86,10 +89,23 @@ export default function Register() {
               // autoComplete="current-password"
               onChange={(e) => handleChange(e.target.value, 'password')}
               variant="filled"
+              size="small"
             />
-            <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }} className={classes.button}>
+            <Button
+              type="submit"
+              size="small"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2, textTransform: 'none' }}
+              className={classes.button}
+            >
               Register
             </Button>
+            <Box className={classes.footer}>
+              <Link to="/login" className={classes.link}>
+                Already have an account? Sign In
+              </Link>
+            </Box>
           </Box>
         </Box>
       </Container>

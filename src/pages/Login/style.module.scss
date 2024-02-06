@@ -1,1 +1,8 @@
 @import '@styles/base';
+
+.footer {
+  @include directionX;
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+}
