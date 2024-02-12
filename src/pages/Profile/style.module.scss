@@ -1,0 +1,8 @@
+@import '@styles/base';
+
+.container {
+  @include directionY;
+  //   justify-content: center;
+  align-items: center;
+  text-align: left;
+}

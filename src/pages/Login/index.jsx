@@ -13,6 +13,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { login } from './actions';
 import classes from './style.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { setLogin } from '@containers/Client/actions';
 // import { encryptPayload } from '@utils/encryptPayload';
 
 const defaultTheme = createTheme();
@@ -29,21 +30,25 @@ export default function Login() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const dataUser = {
-        // email: encryptPayload(user.email),
-        // password: encryptPayload(user.password),
         email: user.email,
         password: user.password,
       };
       dispatch(login(dataUser));
-
-      navigate('/');
+      // Navigasi hanya jika login berhasil
+      if (!setLogin) {
+        navigate('/login');
+      } else {
+        navigate('/');
+      }
+      // navigate('/');
     } catch (error) {
       console.log(error);
+      // Tindakan lain yang diperlukan jika login gagal
     }
   };
 

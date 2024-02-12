@@ -1,0 +1,19 @@
+@import '@styles/base';
+
+.container {
+  background-color: white;
+}
+
+.forget {
+  @include directionX;
+  justify-content: end;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.footer {
+  @include directionX;
+  width: 100%;
+  justify-content: center;
+  font-size: 15px;
+}

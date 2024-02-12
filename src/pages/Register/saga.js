@@ -6,7 +6,8 @@ import { REGISTER } from './constants';
 function* doRegister({ dataUser }) {
   yield put(setLoading(true));
   try {
-    yield call(register, dataUser);
+    const response = yield call(register, dataUser);
+    console.log(response);
   } catch (error) {
     console.log(error);
   }

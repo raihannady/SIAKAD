@@ -1,11 +1,30 @@
-@import '../../../styles/base.scss';
+@import '@styles/base';
 
+.buttonwrapper {
+  @include directionX;
+  justify-content: end;
+  // width: 90%;
+  margin: 0 54px;
+  margin-top: 3rem;
+  .button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 1rem;
+    text-decoration: none;
+  }
+}
+
+.card {
+  @include directionX;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
 .container {
-  //   @include container;4
   width: 90%;
-  margin: 7rem auto;
+  margin: 0.1rem auto;
   border: 1px solid rgba(201, 201, 201, 0.612);
   background-color: white;
+  margin-top: 3rem;
 
   .button {
     display: flex;
